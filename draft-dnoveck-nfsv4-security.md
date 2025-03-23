@@ -20,7 +20,6 @@ abbrev: Nfsv4 Security
 area: Transport
 wg: NFSv4
 kw: example
-date: 2024
 author:
 - role: editor
   name: David Noveck
