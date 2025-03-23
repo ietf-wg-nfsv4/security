@@ -225,7 +225,7 @@ related to the classification of attributes:
   servers that
   supported none of the above attributes and none of the
   acl-related attributes either.  To continue in this
-  way, would overcomplicate the specification and create
+  way, would over complicate the specification and create
   difficult interoperability issues to support
   implementations that have little practical purpose.
 
@@ -402,7 +402,7 @@ together so that a change to compliance specifications would
 inevitably give rise to compatibility issues.  However, over
 time, behaviors have come to be denigrated by use of the terms
 "SHOULD NOT" and "MUST NOT"
-to warn implementors of a harm deriving from insecure operation
+to warn implementers of a harm deriving from insecure operation
 rather than peer incompatibility.
 
 When making changes in compliance requirements/recommendations we
@@ -441,7 +441,7 @@ In the corresponding cases dealt with in this document, the situation
 is more difficult since it may be harder to determine the
 actual behavior of all existing implementations, since the authors
 might no longer be actively involved with implementation issues.
-However, it will be necessary to warn implementors
+However, it will be necessary to warn implementers
 of the negative consequences of certain behaviors without going so far
 as to declare these practices non-compliant.  For the most part, this
 document will use the terms "SHOULD" and
@@ -563,7 +563,7 @@ while providing for continued use of previously compliant
 implementations to continue as needed,
 
 This approach gives rise to compatibility issues, but leaves them
-to implementors and users to resolve, while making clear the
+to implementers and users to resolve, while making clear the
 security issues with the old approach.
 
 
@@ -771,7 +771,7 @@ major areas listed below which are common to all minor versions.
   infrastructure supporting it (discussed in {{IDENT}}) provided by RPC
   and applying to all of NFS.
 
-  An exception is made regarding labelled NFS, an optional
+  An exception is made regarding labeled NFS, an optional
   feature within NFSv4.2, described in {{RFC7862}}.
   This is discussed as a version-specific feature in this
   document in {{AUTHL}}.
@@ -902,7 +902,7 @@ the specific feature.
   the full description of this attribute, will continue to be
   the province of the NFSv4.1 specification proper.
 
-* There is a brief description of the v4.2 Labelled NFS feature
+* There is a brief description of the v4.2 Labeled NFS feature
   in {{AUTHL}}.   Part of that description
   discusses the limitations in the description of that feature
   within {{RFC7862}}.
@@ -1441,7 +1441,7 @@ The following terms are listed in alphabetical order:
 
 This document describes the security features of the NFSv4
 protocol and is unable to address security threats that are
-inherently outside the control of the protocol implementors.
+inherently outside the control of the protocol implementers.
 Such matters as out of this document's scope.
 
 As a way of clarifying the threats that this document, and the threat
@@ -1505,7 +1505,7 @@ by the changes to NFSv4 security made by this document.
   not be effective on the server, even if it happens on local
   clients for which NFSv4 has no role.
 
-  Execution of a ransomeware-based attack requires the attacker to
+  Execution of a ransomware-based attack requires the attacker to
   have the ability to read existing data and replacing it with an
   encrypted version together with the ability to temporarily hide
   the encryption from ongoing operations by intercepting requests
@@ -2444,7 +2444,7 @@ attribute directories are as follows:
   modifications:
 
   For each of owner, group, and others, the read and execute
-  permissions are set iff either the read or execute bit is set
+  permissions are set if and only if either the read or execute bit is set
   in the corresponding set of three bits in the mode
   attribute of the base object.
 
@@ -2659,8 +2659,8 @@ are authorized:
 
 
 
-* NFSv4.2, via the labelled NFS feature, provides an additional
-  potential requirement for request authorization.  The labelled
+* NFSv4.2, via the labeled NFS feature, provides an additional
+  potential requirement for request authorization.  The labeled
   NFS provides "Mandatory access control" not under the control
   of individual users.
 
@@ -2698,7 +2698,7 @@ implemented by the server, as discussed below:
   owning_group, and mode enable use of a POSIX-based authorization
   model, as described in {{AUTHFA-posix}}.
   Since these attributes are always supported, this
-  authorization model is aways available.
+  authorization model is always available.
 
 * \[Consensus Needed (Item #67d)]: The acl attribute (or the
   attribute dacl in NFSv4.1) can
@@ -2909,7 +2909,7 @@ different because of the following:
   common to both file access models, which now appears to have
   not been the original intention.
 
-* This section only deal ADL-based authorization when the
+* This section only deal ACL-based authorization when the
   NFSv4 ACL model is being used.
 
   When support for other sorts of ACL models have been added to
@@ -3379,7 +3379,7 @@ include:
   is set.
 
 
-# Labelled NFS Authorization Model {#AUTHL}
+# Labeled NFS Authorization Model {#AUTHL}
 
 The attribute sec_label was intended to enable an authorization
 model focused on Mandatory Access Control.
@@ -3592,7 +3592,7 @@ Regarding the contents of column 5:
   For NFSv4.1 and beyond, client support is REQUIRED.
 
 Note that the number and name of the pseudo flavor
-are presented here as a mapping aid to the implementor.
+are presented here as a mapping aid to the implementer.
 Because the NFSv4 protocol includes a method to negotiate
 security and it understands the GSS-API mechanism, the pseudo flavor
 is not needed.  The pseudo flavor is needed for NFSv3 since
@@ -3610,7 +3610,7 @@ NFSv4.0 specification, because
 the Kerberos V5 specification at the time did not specify stronger
 algorithms.
 The NFSv4 specification does not specify REQUIRED algorithms
-for Kerberos V5, and instead, the implementor is expected
+for Kerberos V5, and instead, the implementer is expected
 to track the evolution of the Kerberos V5 standard if and when
 stronger algorithms are specified.
 
@@ -3733,7 +3733,7 @@ Different auth flavors differ quite considerably, as discussed below;
 
   Also, the server is not authenticated to the client and has no
   way to determine whether the server it is communicating with is
-  an imposter.
+  an impostor.
 
 * When AUTH_SYS is used, the user making is the request identified
   but there
@@ -3742,7 +3742,7 @@ Different auth flavors differ quite considerably, as discussed below;
   As in the previous case, the server is not authenticated to
   the client and has no
   way to determine whether the server it is communicating with is
-  an imposter.
+  an imposer.
 
 * When RPCSEC_GSS is used, the user making the request is authenticated
   as is the server peer responding.
@@ -4306,7 +4306,7 @@ about many of the items in it.
 
 * Support for content signing.
 
-* Revision/extension of labelled NFS to provide true interoperability
+* Revision/extension of labeled NFS to provide true interoperability
   and server-based authorization.
 
 * Work to provide more security for RDMA-based transports.  This would
@@ -4538,14 +4538,14 @@ When such support is not available, AUTH_SYS SHOULD NOT be used, since
 it makes the following attacks quite easy to execute:
 
 * The absence of authentication of the server to the client
-  allow server impersonation in which an imposter server can
+  allow server impersonation in which an impostor server can
   obtain data to be written by the user and supply corrupted data
   to read requests.
 
 * The absence of authentication of the client user to the server
-  allow client impersonation in which an imposter client can
+  allow client impersonation in which an impostor client can
   issue requests and have them executed as a user designated by
-  imposter client, vitiating the server's authorization policy.
+  impostor client, vitiating the server's authorization policy.
 
   With no authentication of the client peer, common approaches,
   such as using the source IP address can be easily defeated,
@@ -4654,9 +4654,9 @@ to these recommendations, many of which because the implementations
 were
 based on the RFCs {{RFC3530}}, {{RFC7530}}, {{RFC5661}}, or {{RFC8881}}.
 In addition to these cases in which the disregard of the
-recommendations is considered valid because implementors relied on
+recommendations is considered valid because implementers relied on
 existing normative guidance, there will be other cases in which
-implementors choose to ignore these recommendations,
+implementers choose to ignore these recommendations,
 
 Despite the original focus of {{RFC2119}} on
 interoperability, many such implementations will interoperate,
@@ -4680,7 +4680,7 @@ are considered part of Consensus Item #41b.
 
 It is RECOMMENDED that client implementer always
 support data privacy in some form, whether using connection-based
-encryption or data privacy services as provided by RPSCEC_GSS.
+encryption or data privacy services as provided by RPCSEC_GSS.
 This is despite the fact that previous specifications stopped
 short of requiring this support on the client.
 
@@ -4845,7 +4845,7 @@ such as the threats discussed in Sections {{<SECTHREAT-creds}},
 While it is not anticipated
 that those deploying implementations will be aware of the
 detail of this threat analysis, it is expected that
-implementors could use this material to properly set expectations
+implementers could use this material to properly set expectations
 and provide guidance helpful to making deployments secure.
 
 
@@ -4884,7 +4884,7 @@ That assumption is no longer valid for a number of reasons:
 In the near term, there are a number of steps, listed below that
 those deploying NFSv4 servers can take to mitigate these
 weaknesses.  These steps are outside the scope of the NFSv4
-protocols and implementors only role with regard to them is
+protocols and implementers only role with regard to them is
 to make it clear that these weaknesses exist and generally
 require mitigation.
 
@@ -4971,7 +4971,7 @@ the server.
 Despite this protection, it is possible that an attacker, through a
 client vulnerability unrelated to NFSv4, or the installation of
 malware, could effectively control the client peer and act as
-imposter client would, effectively undercutting the authentication
+impostor client would, effectively undercutting the authentication
 of the client.   This possibility makes it necessary, as discussed
 in {{SECTHREAT-auth-sys}} that those deploying
 NFSv4 clients using AUTH_SYS takes steps to limit the set of user
@@ -4994,17 +4994,17 @@ as follows:
 
 * When RPCSEC_GSS is used, the mutual authentication of the server
   and client principal provides assurance the server is not an
-  imposter.
+  impostor.
 
 * When AUTH_SYS or AUTH_NONE is used, the mutual authentication
   of client and server peers provides assurance the server is not an
-  imposter.
+  impostor.
 
 Despite this protection, it is possible that an attacker, through a
 operating system vulnerability unrelated to NFSv4,
 or the installation of
 malware, could effectively control the server peer and act as an
-imposter server would, effectively undercutting the authentication
+impostor server would, effectively undercutting the authentication
 of the server.
 
 The above possibility makes it necessary, that those deploying
@@ -5063,7 +5063,7 @@ can be relied upon.
 
 The existence of client-peer authentication as recommended
 in {{SECCON-changes-authsys}} means that
-imposter servers can be detected and not allowed to use
+impostor servers can be detected and not allowed to use
 AUTH_SYS.  However there are an additional number of issues
 that need to be addressed to adequately protect against
 use of AUTH_SYS enabling attacks:
@@ -5620,7 +5620,7 @@ detail in the companion ACL document {{I-D.dnoveck-nfsv4-acls}}.
   {{AUTHFA-attr}}.
 
   Because file access authorization can be controlled by the
-  POSIX-related authorization attributed decribed in {{ATTR-posix}} and
+  POSIX-related authorization attributed described in {{ATTR-posix}} and
   by ACL-related attributes described in {{ATTR-aclr}}, there is an
   introduction to how these relate in {{AUTHFA-two}} followed by
   discussion of the semantics of the two kinds of supported ACLs in
@@ -5631,7 +5631,7 @@ detail in the companion ACL document {{I-D.dnoveck-nfsv4-acls}}.
   similarities between these two, and {{<AUTHCOMB}} dealing with their
   co-existence and potential conflict.
 
-* Sections {{<AUTHL}} through {{<OTHACL}} deal with, labelled
+* Sections {{<AUTHL}} through {{<OTHACL}} deal with, labeled
   NFS authorization, state modification authorization, and the
   uses of ACLs outside authorization.
 
