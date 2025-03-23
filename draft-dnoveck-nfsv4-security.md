@@ -6091,11 +6091,11 @@ spec will be assigned ids in the range between #100 and #199.
     named attributes.<br/> Needs to be coordinated with handling of
     Item #100, addressed in the companion ACL document.
 
-[^text67-]: Changes to adapt to new ACL architecture.  These
-    include: <ul> <li> Treating the core UNIX ACL model as the
+[^text67-]: Changes to adapt to new ACL architecture.  These include: 
+  - Treating the core UNIX ACL model as the
     REQUIRED with the rest of the NFSv4 ACL model as a set of OPTIONAL
-    extensions. </li> <li> An architecture in which multiple ACL
-    models can be supported. </li> </ul>
+    extensions.
+  -  An architecture in which multiple ACL models can be supported.
 
 The following table summarizes the issues in each particular
 pending state.
